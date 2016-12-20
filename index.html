@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <title>弹性盒模型</title>
+    <script>
+        (function(){
+            var html = document.documentElement;
+            var htmlWidth = html.getBoundingClientRect().width;
+            html.style.fontSize = htmlWidth/15  + "px";
+
+        })()
+    </script>
+    <style>
+        a,
+        input,
+        button {
+            -webket-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        input,
+        button {
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
+        body {
+            margin: 0;
+            -webkit-user-sclect: none;
+            -webkit-text-size-adjust: 100%;
+        }
+        body * {
+            -webkit-user-sclect: none;
+            font-family: Helvetica;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+            vertical-align: top;
+        }
+        a {
+            text-decoration: none;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .rows {
+            display: -webkit-box;
+            display: flex;
+            padding: 0.4rem 0.5rem 0;
+        }
+        .rows div {
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            width: 0;
+        }
+        .rows div a{
+            font-size: 0.44rem;
+            color: #666;
+            text-align: center;
+            line-height: 1.04rem;
+            display: block;
+        }
+        .rows div a:before{
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 1.74rem;
+            height: 1.7rem;
+            background-image: url("icon-1.png");
+            background-size: 9rem 3.5rem;
+        }
+        .rows div:nth-of-type(1) a:before{
+            background-position: 0 0;
+        }
+        .rows div:nth-of-type(2) a:before{
+            background-position: -1.74rem 0;
+        }
+        .rows div:nth-of-type(3) a:before{
+            background-position: -3.48rem 0;
+        }
+        .rows div:nth-of-type(4) a:before{
+            background-position: -5.22rem 0;
+        }
+        .rows div:nth-of-type(5) a:before{
+            background-position: -6.97rem 0;
+        }
+        .rows:nth-of-type(2) div:nth-of-type(1) a:before{
+            background-position: 0 -1.76rem;
+        }
+        .rows:nth-of-type(2) div:nth-of-type(2) a:before{
+            background-position: -1.76rem -1.76rem;
+        }
+        .rows:nth-of-type(2) div:nth-of-type(3) a:before{
+            background-position: -3.5rem -1.76rem;
+        }
+        .rows:nth-of-type(2) div:nth-of-type(4) a:before{
+            background-position: -5.23rem -1.76rem;
+        }
+        .rows:nth-of-type(2) div:nth-of-type(5) a:before{
+            background-position: -7rem -1.76rem;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="rows">
+        <div>
+            <a href="javascript:;">天猫</a>
+        </div>
+        <div>
+            <a href="javascript:;">聚划算</a>
+        </div>
+        <div>
+            <a href="javascript:;">天猫国际</a>
+        </div>
+        <div>
+            <a href="javascript:;">外卖</a>
+        </div>
+        <div>
+            <a href="javascript:;">天猫超市</a>
+        </div>
+    </div>
+    <div class="rows">
+        <div>
+            <a href="javascript:;">充值中心</a>
+        </div>
+        <div>
+            <a href="javascript:;">飞猪旅行</a>
+        </div>
+        <div>
+            <a href="javascript:;">领金币</a>
+        </div>
+        <div>
+            <a href="javascript:;">到家</a>
+        </div>
+        <div>
+            <a href="javascript:;">分类</a>
+        </div>
+    </div>
+</body>
+</html>
